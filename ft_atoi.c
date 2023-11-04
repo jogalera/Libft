@@ -15,15 +15,15 @@
 int	ft_atoi(const char *str)
 {	
 	size_t	i;
-	int	sign;
-	int	result;
+	int	signo;
+	int	resultado;
 
 	i = 0;
-	result = 0;
-	sign = 1;
+	resultado = 0;
+	signo = 1;
 
-	while (str[i] && (str[i] == 9 || str[i] == 10 || str[i] == 11 || 
-				str[i] == 12 || str[i] == 13 || str[i] == 32))
+	while (str[i] && str[i] == 9 || str[i] == 10 || str[i] == 11 ||
+		       	str[i] == 12 || str[i] == 13 || str[i] == 32)
 	{
 		i++;
 	}
@@ -35,28 +35,32 @@ int	ft_atoi(const char *str)
 
 	if (str[i] == '-')
 	{
-		sign = -1;
+		signo = -1;
 		i++;
 	}
 
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result *= 10;
-		result += str[i] - '0';
+		resultado *= 10;
+		resultado += str[i] - '0';
 		i++;
 	}
 
-	result *= sign;
-	return (result);
+	resultado *= signo;
+	return (resultado);
 }
 
-
+/*
 #include <stdio.h>
 #include <string.h>
 int main(){
-	const char	*str = "-+32";
+	const char	*str = "      -1";
 	int	resultado;
+	int	mi_resultado;
 	resultado = atoi(str);
-	printf("Resultado: %d", resultado);
+	mi_resultado = ft_atoi(str);
+	printf("Resultado: %d\n", resultado);
+	printf("Mi resultado: %d", mi_resultado);
 	return (0);
 }
+*/
