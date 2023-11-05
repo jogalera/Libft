@@ -19,12 +19,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	j = 0;
-	
 	if (!needle)
 	{
 		return ((char *)haystack);
 	}
-	
 	while (haystack[i] != '\0' && len > i)
 	{
 		while (haystack[i + j] == needle[j] && haystack[i + j] && i + j < len)
@@ -40,21 +38,23 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-
+/*
 #include <stdio.h>
 #include <string.h>
-int main(){
+
+int	main(void)
+{
 	const char	*haystack = "holabuenas";
 	const char	*needle = "ab";
-	size_t	len = 5;
-	char	*resultado;
-	char	*mi_resultado;
+	size_t		len;
+	char		*resultado;
+	char		*mi_resultado;
 
+	len = 5;
 	resultado = strnstr(haystack, needle, len);
 	mi_resultado = ft_strnstr(haystack, needle, len);
-
 	printf("Funcion original: %s\n", resultado);
 	printf("Mi funcion: %s", mi_resultado);
 	return (0);
 }
+*/

@@ -23,12 +23,12 @@ static int	rec_size(int number, int *x)
 		{
 			*x = 3;
 			number /= 10;
-			counter ++;
+			counter++;
 		}
 		else
 			*x = 1;
 		number *= -1;
-		counter ++;
+		counter++;
 	}
 	if (number >= 10)
 		counter += rec_size(number / 10, x);

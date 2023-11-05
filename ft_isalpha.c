@@ -9,7 +9,12 @@
 /*   Updated: 2023/10/31 10:42:51 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
+isalpha - comprueba que el valor de c en ASCII es alfabetico
 
+isalpha comprueba cualquier caracter que este entre la 'a' minuscula y la 'z' 
+minuscula o entre 'A' mayuscula y 'Z' mayuscula de la tabla ASCII
+*/
 #include "libft.h"
 
 int	ft_isalpha(int c)

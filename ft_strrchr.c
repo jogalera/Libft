@@ -14,16 +14,14 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	size_t	lenz;
+	size_t			lenz;
 	unsigned char	letra;
 
 	letra = (unsigned char)c;
-
 	while (str[lenz] != '\0')
 	{
 		lenz++;
 	}
-
 	while (lenz > 0)
 	{
 		if (str[lenz] == letra)
@@ -32,7 +30,6 @@ char	*ft_strrchr(const char *str, int c)
 		}
 		lenz--;
 	}
-
 	if (str[lenz] == letra)
 	{
 		return ((char *)&str[lenz]);
@@ -42,7 +39,8 @@ char	*ft_strrchr(const char *str, int c)
 /*
 #include <stdio.h>
 #include <string.h>
-int main(){
+
+int	main(void){
 	const char	str[] = "Hola buenas!";
 	int letra = 'o';
 	char *resultado = strrchr(str, letra);

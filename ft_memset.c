@@ -9,17 +9,20 @@
 /*   Updated: 2023/10/31 11:16:56 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+memset - rellena una cadena de bytes con un valor de bytes
+memset - escribe len bytes del valor c (convertido a un unsigned char) 
+en la cadena b.
+*/
 #include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*tmp;
 
 	i = 0;
 	tmp = (unsigned char *)b;
-
 	while (len > 0)
 	{
 		tmp[i] = (unsigned char)c;

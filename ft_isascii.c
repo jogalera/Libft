@@ -9,7 +9,10 @@
 /*   Updated: 2023/10/31 10:49:38 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+isascii - comprueba que el valor de c esta en la tabla ASCII no extendida
+isascii comprueba que le valor de c este entre 'NULL' y 'DEL' en la tabla ASCII
+*/
 #include "libft.h"
 
 int	ft_isascii(int c)

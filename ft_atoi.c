@@ -13,39 +13,32 @@
 #include "libft.h"
 
 int	ft_atoi(const char *str)
-{	
+{
 	size_t	i;
-	int	signo;
-	int	resultado;
+	int		signo;
+	int		resultado;
 
 	i = 0;
 	resultado = 0;
 	signo = 1;
-
-	while (str[i] && str[i] == 9 || str[i] == 10 || str[i] == 11 ||
-		       	str[i] == 12 || str[i] == 13 || str[i] == 32)
-	{
+	while (str[i] && (str[i] == 9 || str[i] == 10 || str[i] == 11 || 
+				str[i] == 12 || str[i] == 13 || str[i] == 32))
 		i++;
-	}
-
 	if (str[i] == '+' && str[i + 1] != '-')
 	{
 		i++;
 	}
-
 	if (str[i] == '-')
 	{
 		signo = -1;
 		i++;
 	}
-
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		resultado *= 10;
 		resultado += str[i] - '0';
 		i++;
 	}
-
 	resultado *= signo;
 	return (resultado);
 }
@@ -53,7 +46,8 @@ int	ft_atoi(const char *str)
 /*
 #include <stdio.h>
 #include <string.h>
-int main(){
+
+int	main(void){
 	const char	*str = "      -1";
 	int	resultado;
 	int	mi_resultado;

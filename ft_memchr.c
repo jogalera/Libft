@@ -19,7 +19,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	char_s = (char *)s;
-
 	while (char_s[i] != '\0' && n > 0)
 	{
 		if (char_s[i] == (char)c)
@@ -34,7 +33,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /*
 #include <stdio.h>
 #include <string.h>
-int main(){
+
+int	main(void){
 	const void	*s = "Hola buenas";
 	int	c = 'a';
 	size_t	n = 6;

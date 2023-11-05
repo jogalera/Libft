@@ -9,7 +9,10 @@
 /*   Updated: 2023/10/31 11:01:31 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+strlen - calcula la longitud de una string
+strlen cuenta cuantos caracteres hay antes del terminating NULL
+*/
 #include "libft.h"
 
 size_t	ft_strlen(const char *c)

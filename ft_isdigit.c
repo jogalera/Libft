@@ -9,7 +9,10 @@
 /*   Updated: 2023/10/31 10:43:42 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+isdigit - comprueba que el valor de c en ASCII es un digito decimal
+isdigit comprueba que le valor de c este entre '0' y '9' en la tabla ASCII
+*/
 #include "libft.h"
 
 int	ft_isdigit(int c)

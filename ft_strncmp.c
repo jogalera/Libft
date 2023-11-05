@@ -15,20 +15,20 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	
-	i = 0;
 
+	i = 0;
 	while (s1[i] == s2[i] && n > 0)
 	{
 		i++;
 		n--;
 	}
-	return((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 /*
 #include <stdio.h>
 #include <string.h>
-int main(){
+
+int	main(void){
 	char *s1 = "hola santi";
 	char *s2 = "hola sonti";
 	size_t n = 8;

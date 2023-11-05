@@ -14,12 +14,11 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	cast_c;
 
 	i = 0;
 	cast_c = (unsigned char)c;
-
 	while (str[i])
 	{
 		if (str[i] == cast_c)
@@ -28,11 +27,9 @@ char	*ft_strchr(const char *str, int c)
 		}
 		i++;
 	}
-
 	if (str[i] == cast_c)
 	{
 		return ((char *)str[i]);
 	}
-
 	return (0);
 }

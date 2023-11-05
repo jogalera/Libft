@@ -14,19 +14,17 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*char_s1;
 	unsigned char	*char_s2;
 
 	i = 0;
 	char_s1 = (unsigned char *)s1;
 	char_s2 = (unsigned char *)s2;
-
 	if (!char_s1 && !char_s2)
 	{
-		return(0);
+		return (0);
 	}
-
 	while (char_s1[i] && char_s2[i] && n > 0)
 	{
 		if (char_s1[i] != char_s2[i])
@@ -41,7 +39,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*
 #include <stdio.h>
 #include <string.h>
-int main(){
+
+int	main(void){
 	const void	*s1 = "Hola buenas";
 	const void	*s2 = "Hola buenos";
 	size_t	n = 11;
