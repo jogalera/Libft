@@ -20,13 +20,19 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	cast_c = (unsigned char)c;
 
-	while (*str)
+	while (str[i])
 	{
-		if (*str == cast_c)
-			return ((char *)str);
-		str++;
+		if (str[i] == cast_c)
+		{
+			return ((char *)str[i]);
+		}
+		i++;
 	}
-	if (*str == cast_c)
-		return ((char *)str);
+
+	if (str[i] == cast_c)
+	{
+		return ((char *)str[i]);
+	}
+
 	return (0);
 }

@@ -11,14 +11,33 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*memory;
+	unsigned char	*tmp;
 
-	memory = (void *)malloc(count * size);
-	if (!memory)
+	tmp = malloc(count * size);
+
+	if (!tmp)
+	{
 		return (0);
-	ft_bzero(memory, count * size);
-	return (memory);
+	}
+
+	ft_bzero(tmp, count * size);
+
+	return (tmp);
 }
+
+/*
+#include <stdio.h>
+int main(){
+	size_t count = 4;
+	size_t size = sizeof(int);
+	void *resultado;
+	void *mi_resultado;
+	resultado = calloc(count, size);
+	mi_resultado = ft_calloc(count, size);
+	printf("Resutado original: %p\n", resultado);
+	printf("Mi resultado: %p", mi_resultado);
+	return (0);
+}
+*/

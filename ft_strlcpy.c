@@ -1,41 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 00:02:59 by jogalera          #+#    #+#             */
-/*   Updated: 2023/10/23 11:16:49 by jogalera         ###   ########.fr       */
+/*   Created: 2023/09/13 13:21:38 by jogalera          #+#    #+#             */
+/*   Updated: 2023/10/31 10:48:32 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	char	*s2;
+	int len;
 
-	s2 = malloc((ft_strlen(s1) * sizeof(char)));
-	i = 0;
-	
-	while (s1[i])
+	len = 0;
+
+	while (src[len] && --dstsize)
 	{
-		s2[i] = s1[i];
-		i++;
+		dst[len] = src[len];
+		len++;
 	}
-	s2[i] = '\0';
+	dst[len] = '\0';
 
-	return (s2);
+	while (src[len])
+	{
+		len++;
+	}
+	return (len);
 }
-
-#include <string.h>
+/*
 #include <stdio.h>
+#include <string.h>
 int main(){
-	const char *s1 = "Hola buenas";
-	char *mi_resultado;
-	mi_resultado = ft_strdup(s1);
-	printf("Mi resultado: %s", mi_resultado);
+	char dst[20];
+	const char *src = "Hola chicos";
+	size_t dstsize = 4;
+	
+	size_t mi_resultado;
+	
+	mi_resultado = ft_strlcpy(dst, src, dstsize);
+	printf("dst: %s\n", dst);
+	printf("Mi resultado: %ld\n", mi_resultado);
 	return (0);
 }
+*/
