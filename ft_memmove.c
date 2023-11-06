@@ -6,12 +6,13 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:32:37 by jogalera          #+#    #+#             */
-/*   Updated: 2023/10/31 12:49:34 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:59:52 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
 memmove - copia una zona de la memoria a otra zona
-memmove copia n bytes del area de memoria src al area de memoria dst
+memmove copia n bytes del area de memoria src al area de memoria dst de forma
+segura
 */
 #include "libft.h"
 
@@ -27,28 +28,20 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (!tmp_dst && !tmp_src)
 		return (NULL);
 	if (tmp_dst > tmp_src)
-	{
-		len = len - 1;
-		while (len > 0)
-		{
+		while (len-- > 0)
 			tmp_dst[len] = tmp_src[len];
-			len--;
-		}
-	}
 	else
 	{
-		while (i < len)
-		{
+		while (i++ < len)
 			tmp_dst[i] = tmp_src[i];
-			i++;
-		}
 	}
 	return (tmp_dst);
 }
 /*
 #include <stdio.h>
 #include <string.h>
-int main(){
+
+int	main(void){
 	char *src = "holabuenas";
 	char *dst = src + 9;
 	void *resultado;

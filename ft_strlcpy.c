@@ -6,10 +6,14 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:21:38 by jogalera          #+#    #+#             */
-/*   Updated: 2023/10/31 10:48:32 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:17:59 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+strlcpy - copia una string con un limite de tamano
+strlcpy copiar una cadena desde src a dst, con un limite de tamano especificado
+por dstsize.
+*/
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

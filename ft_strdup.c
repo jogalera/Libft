@@ -6,7 +6,7 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 00:02:59 by jogalera          #+#    #+#             */
-/*   Updated: 2023/10/23 11:16:49 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:49:44 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -24,7 +24,7 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 	char	*s2;
 
-	s2 = ft_calloc(ft_strlen(s1), sizeof(char));
+	s2 = ft_calloc((ft_strlen(s1)+1), sizeof(char));
 	if (!s2)
 		return (0);
 	i = 0;

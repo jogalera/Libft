@@ -6,7 +6,7 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:16:35 by jogalera          #+#    #+#             */
-/*   Updated: 2023/10/31 10:42:51 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:01:14 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -20,7 +20,7 @@ minuscula o entre 'A' mayuscula y 'Z' mayuscula de la tabla ASCII
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (c);
+		return (1);
 	else
 		return (0);
 }

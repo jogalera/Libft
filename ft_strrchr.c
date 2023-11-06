@@ -6,17 +6,21 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 12:37:19 by jogalera          #+#    #+#             */
-/*   Updated: 2023/11/02 13:11:51 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:30:33 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+strrchr - encuentra el ultimo caracter especificado en un string
+strrchr localiza la ultima aparicion de c en la string
+*/
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
 	size_t			lenz;
 	unsigned char	letra;
-
+	
+	lenz = 0;
 	letra = (unsigned char)c;
 	while (str[lenz] != '\0')
 	{

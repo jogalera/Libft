@@ -6,7 +6,7 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 15:22:26 by jogalera          #+#    #+#             */
-/*   Updated: 2023/11/02 11:30:30 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:46:14 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlen(const char *c);
 void		*ft_memset(void *b, int c, size_t l);
 void		ft_bzero(void *s, size_t n);

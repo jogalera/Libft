@@ -6,10 +6,14 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:57:11 by jogalera          #+#    #+#             */
-/*   Updated: 2023/11/03 12:14:32 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:44:16 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+strnstr - busca una substring en una string
+strnstr busca una subcadena en una cadena principal pero con un limite 
+especificado por 'len'
+*/
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

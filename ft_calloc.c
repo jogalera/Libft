@@ -6,10 +6,14 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 22:18:52 by jogalera          #+#    #+#             */
-/*   Updated: 2023/10/23 11:16:42 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:49:28 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+calloc - asigna memoria
+calloc asigna memoria dinamica para un bloque de datos e inicializar todos los
+bytes de esa memoria en cero
+*/
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)

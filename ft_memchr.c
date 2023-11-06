@@ -6,10 +6,13 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 18:40:22 by jogalera          #+#    #+#             */
-/*   Updated: 2023/11/03 10:58:25 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:37:41 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+memchr - busca un byte especifico en un bloque de memoria
+memchr localiza la primera aparición de c en la cadena s.
+*/
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)

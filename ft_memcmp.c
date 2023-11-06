@@ -6,10 +6,13 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 21:00:10 by jogalera          #+#    #+#             */
-/*   Updated: 2023/11/03 11:17:45 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:40:30 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+memcmp - compara dos cadenas de bytes
+memcmp compara los 'n' bytes de los bloques de memoria 's1' y 's2'
+*/
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -25,14 +28,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		return (0);
 	}
-	while (char_s1[i] && char_s2[i] && n > 0)
+	while (n > i)
 	{
 		if (char_s1[i] != char_s2[i])
 		{
 			return (char_s1[i] - char_s2[i]);
 		}
 		i++;
-		n--;
 	}
 	return (0);
 }

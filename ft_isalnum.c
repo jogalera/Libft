@@ -6,7 +6,7 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:21:38 by jogalera          #+#    #+#             */
-/*   Updated: 2023/10/31 10:48:32 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:58:10 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -21,7 +21,7 @@ int	ft_isalnum(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0'
 			&& c <= '9'))
-		return (c);
+		return (1);
 	else
 		return (0);
 }
