@@ -6,7 +6,7 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:21:38 by jogalera          #+#    #+#             */
-/*   Updated: 2023/11/06 13:17:59 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/09 12:50:40 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -18,20 +18,19 @@ por dstsize.
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	len;
+	size_t	i;
 
-	len = 0;
-	while (src[len] && --dstsize)
+	i = 0;
+	while (src[i] && dstsize > i + 1)
 	{
-		dst[len] = src[len];
-		len++;
+		dst[i] = src[i];
+		i++;
 	}
-	dst[len] = '\0';
-	while (src[len])
-	{
-		len++;
-	}
-	return (len);
+	if (dstsize > i)
+		dst[i] = '\0';
+	while (src[i])
+		i++;
+	return (i);
 }
 /*
 #include <stdio.h>

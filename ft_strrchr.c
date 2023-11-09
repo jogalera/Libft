@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *str, int c)
 {
 	size_t			lenz;
 	unsigned char	letra;
-	
+
 	lenz = 0;
 	letra = (unsigned char)c;
 	while (str[lenz] != '\0')

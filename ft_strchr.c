@@ -39,7 +39,8 @@ char	*ft_strchr(const char *str, int c)
 /*
 #include <stdio.h>
 #include <string.h>
-int main(){
+
+int	main(void){
 	const char *str = "Hola buenas";
 	int	c = 'a';
 	char *resultado;

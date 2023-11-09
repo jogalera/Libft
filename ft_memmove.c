@@ -6,7 +6,7 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:32:37 by jogalera          #+#    #+#             */
-/*   Updated: 2023/11/07 12:04:03 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/09 13:29:52 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -32,8 +32,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			tmp_dst[len] = tmp_src[len];
 	else
 	{
-		while (i++ < len)
+		while (i < len)
+		{
 			tmp_dst[i] = tmp_src[i];
+			i++;
+		}			 	
 	}
 	return (tmp_dst);
 }

@@ -6,7 +6,7 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:59:09 by jogalera          #+#    #+#             */
-/*   Updated: 2023/11/08 13:26:57 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/09 12:10:43 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -16,20 +16,21 @@ Esta nueva cadena comienza en 'start' y tiene un tamano maximo de 'len'
 */
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	char *str;
+	char	*str;
 
 	i = 0;
-
 	if (!s)
 		return (0);
 	if (start > ft_strlen(s))
-		return (0);
+		return (ft_strdup(""));
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	str = ft_calloc(len + 1, sizeof(char));
+	if (!str)
+		return (0);
 	while (len > i)
 	{
 		str[i] = s[start + i];
@@ -40,7 +41,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 }
 /*
 #include <stdio.h>
-int main(){
+
+int	main(void){
 	char const *s = "holabuenas";
 	unsigned int start = 0;
 	size_t len = 4;

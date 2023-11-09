@@ -48,12 +48,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 int	main(void)
 {
-	const char	*haystack = "holabuenas";
-	const char	*needle = "ab";
+	const char	*haystack;
+	const char	*needle;
 	size_t		len;
 	char		*resultado;
 	char		*mi_resultado;
 
+	haystack = "holabuenas";
+	needle = "ab";
 	len = 5;
 	resultado = strnstr(haystack, needle, len);
 	mi_resultado = ft_strnstr(haystack, needle, len);
