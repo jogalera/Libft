@@ -6,7 +6,7 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 17:01:10 by jogalera          #+#    #+#             */
-/*   Updated: 2023/10/13 17:13:45 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/07 12:28:39 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
+	return (0);
 }

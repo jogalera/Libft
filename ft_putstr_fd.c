@@ -6,7 +6,7 @@
 /*   By: jogalera <jogalera@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:06:15 by jogalera          #+#    #+#             */
-/*   Updated: 2023/10/13 17:13:47 by jogalera         ###   ########.fr       */
+/*   Updated: 2023/11/07 12:31:06 by jogalera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while(s[i] != '\0')
 	{
 		ft_putchar_fd(s[i], fd);
 		i++;
 	}
+	return(0);
 }
